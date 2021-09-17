@@ -19,7 +19,6 @@ for row in taxi_list:
 taxi=np.array(converted_taxi_list)
 taxi_copy=taxi.copy()
 total_amount=taxi_copy[:,13]
-print(total_amount)
 
 total_bool=total_amount<0
 taxi_copy[total_bool,13]=0
