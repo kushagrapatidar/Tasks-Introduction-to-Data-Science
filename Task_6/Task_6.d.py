@@ -17,8 +17,10 @@ for row in taxi_list:
     converted_taxi_list.append(converted_row)
 
 taxi=np.array(converted_taxi_list)
-taxi_modified=taxi.copy()
-#taxi_modified[1066,5]=1
-taxi_modified[:,0]=16
-print(taxi_modified)
-#taxi_modified[551,7]=taxi_modified[550,7]=(taxi[:,7].sum()-taxi_modified[550,7]-taxi_modified[551,7])/(len(taxi_modified)-1)
+taxi_copy=taxi.copy()
+total_amount=taxi_copy[:,13]
+print(total_amount)
+
+total_bool=total_amount<0
+taxi_copy[total_bool,13]=0
+print(taxi_copy)
