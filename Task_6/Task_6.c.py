@@ -1,7 +1,7 @@
 print("Name: Kushagra Patidar\nScholar Number: 30665")
 import csv
 import numpy as np 
-f=open("nyc_taxi.csv","r",encoding="utf8")
+f=open("yellow_trip_data.csv","r",encoding="utf8")
 taxi_list=list(csv.reader(f))
 
 taxi_list=taxi_list[1:]
@@ -18,7 +18,7 @@ for row in taxi_list:
 
 taxi=np.array(converted_taxi_list)
 taxi_modified=taxi.copy()
-#taxi_modified[1066,5]=1
+taxi_modified[1066,5]=1
 taxi_modified[:,0]=16
 print(taxi_modified)
-#taxi_modified[551,7]=taxi_modified[550,7]=(taxi[:,7].sum()-taxi_modified[550,7]-taxi_modified[551,7])/(len(taxi_modified)-1)
+taxi_modified[551,7]=taxi_modified[550,7]=(taxi[:,7].sum()-taxi_modified[550,7]-taxi_modified[551,7])/(len(taxi_modified)-1)

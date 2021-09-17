@@ -1,7 +1,7 @@
 print("Name: Kushagra Patidar\nScholar Number: 30665")
 import csv
 import numpy as np 
-f=open("nyc_taxi.csv","r",encoding="utf8")
+f=open("yellow_trip_data.csv","r",encoding="utf8")
 taxi_list=list(csv.reader(f))
 
 taxi_list=taxi_list[1:]
