@@ -18,7 +18,17 @@ for row in taxi_list:
 
 taxi=np.array(converted_taxi_list)
 taxi_modified=taxi.copy()
+
+print(taxi_modified[1066,5])
 taxi_modified[1066,5]=1
+print(taxi_modified[1066,5])
+print("\n")
+
+print(taxi_modified[:,0])
 taxi_modified[:,0]=16
-print(taxi_modified)
+print(taxi_modified[:,0])
+print("\n")
+
+print(taxi_modified[550,7],taxi_modified[551,7])
 taxi_modified[551,7]=taxi_modified[550,7]=(taxi[:,7].sum()-taxi_modified[550,7]-taxi_modified[551,7])/(len(taxi_modified)-1)
+print(taxi_modified[550,7],taxi_modified[551,7])
