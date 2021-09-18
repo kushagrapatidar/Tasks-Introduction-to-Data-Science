@@ -2,7 +2,7 @@ print("Name: Kushagra Patidar\nScholar Number: 30665")
 import csv
 import numpy as np 
 # import nyc_taxi.csv as a list of lists
-f=open("nyc_taxi_new.csv","r",encoding="utf8")
+f=open("yellow_trip_data.csv","r",encoding="utf8")
 taxi_list=list(csv.reader(f))
 # remove the header row
 taxi_list=taxi_list[1:]
@@ -19,3 +19,14 @@ for row in taxi_list:
 
 data_ndarray=np.array(converted_taxi_list)
 taxi = data_ndarray
+
+cols=[1,4,7]
+columns_1_4_7=taxi[:,cols]
+
+row_99_columns_5_to_8=taxi[99,5:9]
+
+rows_100_to_200_column_14=taxi[100:201,14]
+
+print(columns_1_4_7)
+print(row_99_columns_5_to_8)
+print(rows_100_to_200_column_14)

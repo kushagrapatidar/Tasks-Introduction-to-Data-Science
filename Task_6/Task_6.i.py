@@ -19,3 +19,5 @@ for row in taxi_list:
 
 data_ndarray=np.array(converted_taxi_list)
 taxi = data_ndarray
+taxi_shape=taxi.shape
+print(taxi_shape)
