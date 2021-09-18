@@ -21,5 +21,7 @@ taxi_copy=taxi.copy()
 total_amount=taxi_copy[:,13]
 
 total_bool=total_amount<0
+
+print(taxi_copy[total_bool,13])
 taxi_copy[total_bool,13]=0
-print(taxi_copy)
+print(taxi_copy[total_bool,13])
