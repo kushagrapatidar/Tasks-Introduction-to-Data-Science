@@ -17,6 +17,6 @@ for row in taxi_list:
     converted_taxi_list.append(converted_row)
 
 taxi=np.array(converted_taxi_list)
-tip_bool=taxi[:,12]>50
+tip_bool=taxi[:,11]>50
 top_tips=taxi[tip_bool,5:14]
 print(top_tips)
