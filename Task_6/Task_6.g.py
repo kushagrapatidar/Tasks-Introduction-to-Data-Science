@@ -19,3 +19,4 @@ for row in taxi_list:
 
 data_ndarray=np.array(converted_taxi_list)
 taxi = data_ndarray
+print("Taxi Array Created Successfully!!")
