@@ -13,4 +13,6 @@ for r in regions:
     region_group_mean = region_group['Happiness Score'].mean()
     mean_happiness[r] = region_group_mean
 
+print('\n')
 [print(r,':',mean_happiness[r]) for r in regions]
+print('\n')
